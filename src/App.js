@@ -1,5 +1,3 @@
-// App.js
-
 import React, { useState } from 'react';
 import './App.css';
 import { firestore } from './firebase';
@@ -29,8 +27,14 @@ function App() {
   return (
     <div className="App">
       <div className="content">
+        <div className="title">
         <h1>¡ES HORA DE PONER A<br />PRUEBA TUS CONOCIMIENTOS<br />EN CIBERSEGURIDAD!</h1>
-        <h2>¿CREES ESTAR LISTO<br />PARA EL DESAFIO?</h2>
+        </div>
+        <div className="subtitle">
+        <h2>¿CREES ESTAR LISTO PARA EL DESAFIO?</h2>
+        </div>
+        <div className="name">
+        <h3>Mi nombre es...</h3>
         <input
           type="text"
           placeholder="DIGITA TU NOMBRE COMPLETO"
@@ -39,9 +43,10 @@ function App() {
           required
         />
         {errorMessage && <div className="error-message">{errorMessage}</div>}
+        </div>
         <div className="buttons">
-          <button onClick={handleSubmit}>EMPEZAR</button>
-          <a href="https://www.google.com/">VER CLASE</a>
+          <button className="start-btn" onClick={handleSubmit}>ESTOY LISTO</button>
+          <a className="goto-btn" href="https://www.google.com/">VER CLASE</a>
         </div>
       </div>
     </div>
